@@ -1,0 +1,76 @@
+# --------------------------
+# Python / Poetry / Packaging
+# --------------------------
+.venv/
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+
+dist/
+build/
+*.egg-info/
+
+# Testing / Coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Type checking / Lint caches
+.mypy_cache/
+.ruff_cache/
+.pytype/
+
+# --------------------------
+# Jupyter
+# --------------------------
+.ipynb_checkpoints/
+
+# --------------------------
+# Environment files
+# --------------------------
+.env
+.env.*
+!.env.example
+
+# --------------------------
+# OS / Editor
+# --------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+
+# --------------------------
+# Logs
+# --------------------------
+logs/
+*.log
+
+# --------------------------
+# Secrets
+# --------------------------
+.secrets/
+**/kaggle.json
+
+# --------------------------
+# Data (keep structure + docs, ignore generated data)
+# --------------------------
+data/raw/
+data/interim/
+data/processed/
+data/external/
+!data/README.md
+
+# --------------------------
+# Artifacts (model outputs, metrics, forecasts)
+# --------------------------
+artifacts/models/
+artifacts/metrics/
+artifacts/forecasts/
+!artifacts/README.md
+
+# --------------------------
+# Go / Pipeline build outputs
+# --------------------------
+pipelines/**/bin/
