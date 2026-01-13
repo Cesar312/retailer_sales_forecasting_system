@@ -74,3 +74,9 @@ artifacts/forecasts/
 # Go / Pipeline build outputs
 # --------------------------
 pipelines/**/bin/
+
+
+# --------------------------
+# Specific directory ignores
+# --------------------------
+template/
