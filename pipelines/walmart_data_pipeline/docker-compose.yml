@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: walmart_postgres
+    environment:
+      POSTGRES_USER: ${DB_USER:-walmart_user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-walmart_pass}
+      POSTGRES_DB: ${DB_NAME:-walmart_db}
+    ports:
+      - "${DB_PORT:-5433}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-walmart_user} -d ${DB_NAME:-walmart_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
