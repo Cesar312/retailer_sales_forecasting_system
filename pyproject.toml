@@ -16,6 +16,7 @@ psycopg2-binary = "^2.9.11"
 python-dotenv = "^1.2.1"
 ipykernel = "^7.1.0"
 jupyter = "^1.1.1"
+seaborn = "^0.13.2"
 
 
 [build-system]
