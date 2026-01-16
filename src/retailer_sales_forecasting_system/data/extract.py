@@ -5,7 +5,6 @@ from sqlalchemy import text
 
 from retailer_sales_forecasting_system.db.postgres import get_engine
 
-
 DEFAULT_TABLE = "walmart_sales"
 
 
