@@ -3,6 +3,12 @@
 ## Docker
 
 ### Check PostgreSQL Container Status 
+
+To check the status of all running Docker containers, use the following command in your terminal:
+```
+docker ps
+```
+
 To check the status of the PostgreSQL Container `walmart_postgres`, use the following command in your terminal:
 ```
 docker ps | grep walmart_postgres
@@ -10,12 +16,20 @@ docker ps | grep walmart_postgres
 
 ### Restart PostgreSQL Container
 To restart the PostgreSQL container, use the following command in your terminal:
+```
+docker restart walmart_postgres
+```
 
+Docker Compose reads the `docker-compose.yml` file in the current directory to set up and manage multi-container Docker applications. This command ensures your entire service stack matches your docker-compose.yml configuration or after making changes to that file.
 ```
 docker-compose up -d
 ```
 
-This command ensures your entire service stack matches your docker-compose.yml configuration or after making changes to that file.
+### Stop PostgreSQL Docker Containers
+To stop the PostgreSQL container, use the following command in your terminal:
+```
+docker stop walmart_postgres
+```
 
 ## Python Virtual Environment
 
