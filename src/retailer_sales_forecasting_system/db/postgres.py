@@ -20,7 +20,7 @@ def _load_repo_env() -> None:
 
 def get_engine() -> Engine:
     """
-    Returns a SQLAlchemy Engine for the Postgres instance defined in .env.
+    Returns a SQLAlchemy Engine for the PostgreSQL instance defined in .env.
     """
     _load_repo_env()
 
